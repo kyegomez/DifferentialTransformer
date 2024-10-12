@@ -173,7 +173,8 @@ class DifferentialTransformerBlock(nn.Module):
             dim,
             dim,
             mult=4,
-            swish=True,
+            swiglu=True,
+            post_act_ln=True
         )
         
         self.norm = SimpleRMSNorm(dim)
@@ -203,11 +204,11 @@ class DifferentialTransformer(nn.Module):
     """
     def __init__(
         self,
-        dim: int, 
+        dim: int = 3072, 
         heads: int = 12,
         dropout: float = 0.1,
-        λinit: float = 0.05,
-        depth: int = 10,
+        λinit: float = 0.8,
+        depth: int = 24,
         num_tokens: int = 30000,
         *args, **kwargs
     ):

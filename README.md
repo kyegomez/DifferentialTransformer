@@ -1,6 +1,7 @@
 
 # Differential Transformer 
-An open source community implementation of the model from "DIFFERENTIAL TRANSFORMER" paper by Microsoft. [Paper Link](https://arxiv.org/abs/2410.05258)
+
+An open source community implementation of the model from "DIFFERENTIAL TRANSFORMER" paper by Microsoft. [Paper Link](https://arxiv.org/abs/2410.05258). "Differential attention takes the difference between two softmax attention functions to eliminate attention noise. The idea is analogous to differential amplifiers [19] proposed in electrical engineering,where the difference between two signals is used as output, so that we can null out the common-mode noise of the input. In addition, the design of noise-canceling headphones is based on a similar idea. We can directly reuse FlashAttention [8] as described in Appendix A, which significantly improves model efficiency."
 
 
 
