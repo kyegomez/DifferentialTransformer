@@ -250,34 +250,34 @@ class DifferentialTransformer(nn.Module):
         
         return OutputHead(self.dim, vocab_size=self.num_tokens)(x)
     
-# Example usage:
-# Example dimensions
-batch_size = 32
-seq_len = 128
-embedding_dim = 64
-h = 8
-λ = 0.1
-λinit = 0.05
-
-# Create random input tensor
-x = torch.randint(0, 256, (1, 1024))
-
-# import torch
-
-# # Define parameters
+# # Example usage:
+# # Example dimensions
 # batch_size = 32
 # seq_len = 128
-# vocab_size = 30522  # Common vocabulary size for models like BERT
+# embedding_dim = 64
+# h = 8
+# λ = 0.1
+# λinit = 0.05
 
-# # Generate random token IDs
-# random_tokens = torch.randint(low=0, high=vocab_size, size=(batch_size, seq_len))
+# # Create random input tensor
+# x = torch.randint(0, 256, (1, 1024))
 
-# # Print the shape of the generated tokens
-# print(f"Random tokens shape: {random_tokens.shape}")
+# # import torch
+
+# # # Define parameters
+# # batch_size = 32
+# # seq_len = 128
+# # vocab_size = 30522  # Common vocabulary size for models like BERT
+
+# # # Generate random token IDs
+# # random_tokens = torch.randint(low=0, high=vocab_size, size=(batch_size, seq_len))
+
+# # # Print the shape of the generated tokens
+# # print(f"Random tokens shape: {random_tokens.shape}")
 
 
-# Instantiate and run the multi-head attention
-multi_head = DifferentialTransformer(heads=h, dim=embedding_dim, λinit=λinit)
-output = multi_head(x, λ=λ)
+# # Instantiate and run the multi-head attention
+# multi_head = DifferentialTransformer(heads=h, dim=embedding_dim, λinit=λinit)
+# output = multi_head(x, λ=λ)
 
-logger.info(f"Output shape: {output.shape}")
+# logger.info(f"Output shape: {output.shape}")
